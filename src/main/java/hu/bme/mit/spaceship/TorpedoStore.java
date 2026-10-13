@@ -60,3 +60,8 @@ public class TorpedoStore {
     return this.torpedoCount;
   }
 }
+
+//changes made:
+//1. Changing =- to -= prevents an unexpected error from happening as x=-y is not the same as x-=y, the prior is interpretted as x = (-y) and not x = x-y
+//2. Refactored the Random() method to use a common random no generator instead of create a whole new one every time we need a random number.
+//3. there was an unused exception handler, I added `throw` to make it useful.
